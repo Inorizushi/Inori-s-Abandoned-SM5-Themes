@@ -1,0 +1,4 @@
+[Model]
+Meshes=versus_mesh.txt
+Materials=versus_materials.txt
+Bones=versus_bones.txt

@@ -1,0 +1,10 @@
+<ActorFrame><children>
+	<Layer 
+		File="@GetClass()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"
+		Frame1Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep()*2);self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep()*2);self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep()*2);self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep()*2);self:queuecommand('Frame1') end"
+	/>	
+</children></ActorFrame>

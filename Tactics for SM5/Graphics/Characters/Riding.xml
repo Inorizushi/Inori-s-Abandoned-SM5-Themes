@@ -1,0 +1,64 @@
+<ActorFrame><children>
+	<Layer Type="ActorFrame" InitCommand="x,-500"><children>
+		<Layer
+			File="@GetClassShadow(1)"
+		/>
+		<Layer
+			File="@GetChocobo()"
+			InitCommand="@GetClassInit('076')"
+		/>
+		<Layer Type="ActorFrame" InitCommand="x,5;y,-17"><children>
+			<Layer
+				File="@GetClassPath()"
+				InitCommand="@GetClassRiding1()"
+			/>
+			<Layer
+				File="@GetClassPath()"
+				InitCommand="@GetClassRiding2()"
+			/>
+		</children></Layer>
+		<Layer
+			File="@GetChocoboOverlay()"
+			InitCommand="@GetClassInit('076')"
+		/>		
+	</children></Layer>
+	<Layer Type="ActorFrame" InitCommand="x,-35"><children>
+		<Layer
+			File="@GetClassShadow(1)"
+		/>
+		<Layer
+			File="@GetChocobo()"
+			InitCommand="@GetClassInit('076')"
+		/>
+	</children></Layer>
+	<Layer Type="ActorFrame" InitCommand="x,35"><children>
+		<Layer
+			File="@GetClassShadow(1)"
+		/>
+		<Layer
+			File="@GetClassPath()"
+			InitCommand="@GetClassDead(GetClassNum())"
+		/>
+	</children></Layer>
+	<Layer Type="ActorFrame" InitCommand="x,500"><children>
+		<Layer Type="ActorFrame" InitCommand="x,-35"><children>
+			<Layer
+				File="@GetClassShadow(1)"
+			/>
+			<Layer
+				File="@GetChocobo()"
+				InitCommand="@GetClassDead('076')"
+			/>
+		</children></Layer>
+		<Layer Type="ActorFrame" InitCommand="x,35"><children>
+			<Layer
+				File="@GetClassShadow(1)"
+			/>
+			<Layer
+				File="@GetClassPath()"
+			InitCommand="@GetClassDead(GetClassNum())"
+			/>
+		</children></Layer>
+	</children></Layer>
+</children></ActorFrame>
+

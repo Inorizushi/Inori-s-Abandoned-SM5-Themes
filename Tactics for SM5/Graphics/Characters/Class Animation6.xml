@@ -1,0 +1,52 @@
+<ActorFrame><children>
+	<Layer 
+		File="@GetChocobo()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"
+		Frame1Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(16);self:y(237);self:cropleft(.375);self:cropright(.43);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+		Frame5Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+		Frame6Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+		Frame7Command="%function(self) self:x(256);self:y(237);self:cropleft(0);self:cropright(.81);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+		Frame8Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+	/>			
+	<Layer Type="ActorFrame" InitCommand="x,4;y,-17"><children>
+		<Layer 
+			File="@GetClassPath()"
+			InitCommand="zoomy,1.2;queuecommand,Frame1"
+			Frame1Command="%function(self) self:x(275);self:y(164);self:croptop(.14);self:cropbottom(.77);self:cropleft(0);self:cropright(.895);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+			Frame2Command="%function(self) self:x(195);self:y(166);self:croptop(.14);self:cropbottom(.77);self:cropleft(.125);self:cropright(.77);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+			Frame3Command="%function(self) self:x(115);self:y(168);self:croptop(.14);self:cropbottom(.77);self:cropleft(.25);self:cropright(.645);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+			Frame4Command="%function(self) self:x(195);self:y(166);self:croptop(.14);self:cropbottom(.77);self:cropleft(.125);self:cropright(.77);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+			Frame5Command="%function(self) self:x(275);self:y(164);self:croptop(.14);self:cropbottom(.77);self:cropleft(0);self:cropright(.895);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+			Frame6Command="%function(self) self:x(-205);self:y(246);self:croptop(0);self:cropbottom(.9);self:cropleft(.76);self:cropright(.145);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+			Frame7Command="%function(self) self:x(-125);self:y(248);self:croptop(0);self:cropbottom(.9);self:cropleft(.625);self:cropright(.27);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+			Frame8Command="%function(self) self:x(-205);self:y(246);self:croptop(0);self:cropbottom(.9);self:cropleft(.76);self:cropright(.145);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+		/>
+		<Layer
+			Condition="GetClassAnimationNum() == '1'"
+			File="@GetClassPath()"
+			InitCommand="zoomy,1.2;x,155;y,108;croptop,.28;cropbottom,.65;cropleft,.20;cropright,.71;queuecommand,Set"
+			SetCommand="%function(self) self:y(108);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:queuecommand('Set') end"
+		/>
+		<Layer
+			Condition="GetClassAnimationNum() == '2'"
+			File="@GetClassPath()"
+			InitCommand="zoomy,1.2;x,155;y,106;croptop,.28;cropbottom,.65;cropleft,.20;cropright,.71;queuecommand,Set"
+			SetCommand="%function(self) self:y(106);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(2);self:sleep(GetSleep());self:addy(-2);self:sleep(GetSleep());self:queuecommand('Set') end"
+		/>
+	</children></Layer>
+	<Layer 
+		File="@GetChocoboOverlay()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"
+		Frame1Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(16);self:y(237);self:croptop(0);self:cropbottom(.83);self:cropleft(.375);self:cropright(.43);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+		Frame5Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+		Frame6Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+		Frame7Command="%function(self) self:x(256);self:y(237);self:cropleft(0);self:cropright(.81);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+		Frame8Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.67);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+	/>	
+</children></ActorFrame>

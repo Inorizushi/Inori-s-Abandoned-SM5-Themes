@@ -1,0 +1,4 @@
+[Model]
+Meshes=star_mesh.txt
+Materials=star_materials_red.txt
+Bones=star_bones.txt

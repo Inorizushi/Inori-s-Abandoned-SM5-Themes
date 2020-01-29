@@ -1,0 +1,19 @@
+<ActorFrame><children>
+	<ActorFrame
+		InitCommand="%function(self) if GetClassType() == '3' then self:queuecommand('Float') end end"
+		FloatCommand="%function(self) self:y(-15);self:sleep(GetSleep()*1.6);self:y(-17);self:sleep(GetSleep()*1.6);self:y(-19);self:sleep(GetSleep()*1.6);self:y(-21);self:sleep(GetSleep()*1.6);self:y(-23);self:sleep(GetSleep()*1.6);self:y(-21);self:sleep(GetSleep()*1.6);self:y(-19);self:sleep(GetSleep()*1.6);self:y(-17);self:sleep(GetSleep()*1.6);self:queuecommand('Float') end"
+		><children>
+		<Layer 
+			File="@GetClass()"
+			InitCommand="zoomy,1.2;queuecommand,Frame1"
+			Frame1Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+			Frame2Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.666);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+			Frame3Command="%function(self) self:x(16);self:y(237);self:cropleft(.375);self:cropright(.44);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+			Frame4Command="%function(self) self:x(136);self:y(141);self:cropleft(.19);self:cropright(.625);self:croptop(.17);self:cropbottom(.666);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+			Frame5Command="%function(self) self:x(136);self:y(237);self:cropleft(.19);self:cropright(.625);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+			Frame6Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.666);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+			Frame7Command="%function(self) self:x(256);self:y(237);self:cropleft(0);self:cropright(.81);self:croptop(0);self:cropbottom(.83);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+			Frame8Command="%function(self) self:x(256);self:y(141);self:cropleft(0);self:cropright(.81);self:croptop(.17);self:cropbottom(.666);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+		/>			
+	</children></ActorFrame>
+</children></ActorFrame>

@@ -1,0 +1,18 @@
+<ActorFrame> <children>
+	<ActorFrame UpdateCommand="%DifficultyList" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,1" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,2" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,3" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,4" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,5" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,6" UpdateCommand="%function(self) DifficultyListCommand(self,'difficulty') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,1" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,2" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,3" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,4" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,5" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Font="_FFT" Text="" InitCommand="aux,6" UpdateCommand="%function(self) DifficultyListCommand(self,'meter') end" />
+	<Layer Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)" File="DifficultyList Cursor.png" UpdateCommand="y,(listPointerY[1]-1)*27" InitCommand="zoomy,1.2;x,-95;shadowlength,3;bounce;effectmagnitude,-8,0,0;effectperiod,0.8;effectoffset,0.2" />
+	<Layer Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)" File="DifficultyList Cursor.png" UpdateCommand="y,(listPointerY[2]-1)*27" InitCommand="zoomy,1.2;x,55;shadowlength,3;bounce;effectmagnitude,8,0,0;effectperiod,0.8;effectoffset,0.2;rotationy,180" />
+</children> </ActorFrame>
+

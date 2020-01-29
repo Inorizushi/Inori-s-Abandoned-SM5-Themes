@@ -1,0 +1,38 @@
+<ActorFrame><children>
+	<Layer 
+		File="@GetClass()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"  
+		Frame1Command="%function(self) self:x(-37);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.50);self:cropright(.40);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(-165);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.70);self:cropright(.20);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(-285);self:y(104);self:croptop(.28);self:cropbottom(.65);self:cropleft(.89);self:cropright(0);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(-165);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.70);self:cropright(.20);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+		Frame5Command="%function(self) self:x(-37);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.50);self:cropright(.40);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+		Frame6Command="%function(self) self:x(82);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.32);self:cropright(.60);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+		Frame7Command="%function(self) self:x(205);self:y(104);self:croptop(.28);self:cropbottom(.65);self:cropleft(.12);self:cropright(.80);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+		Frame8Command="%function(self) self:x(82);self:y(102);self:croptop(.28);self:cropbottom(.65);self:cropleft(.32);self:cropright(.60);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+	/>
+	<Layer 
+		File="@GetClass()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"
+		Frame1Command="%function(self) self:x(275);self:y(164);self:croptop(.14);self:cropbottom(.725);self:cropleft(0);self:cropright(.875);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(195);self:y(166);self:croptop(.14);self:cropbottom(.725);self:cropleft(.125);self:cropright(.75);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(115);self:y(168);self:croptop(.14);self:cropbottom(.725);self:cropleft(.25);self:cropright(.625);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(195);self:y(166);self:croptop(.14);self:cropbottom(.725);self:cropleft(.125);self:cropright(.75);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+		Frame5Command="%function(self) self:x(275);self:y(164);self:croptop(.14);self:cropbottom(.725);self:cropleft(0);self:cropright(.875);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+		Frame6Command="%function(self) self:x(-205);self:y(246);self:croptop(0);self:cropbottom(.86);self:cropleft(.76);self:cropright(.125);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+		Frame7Command="%function(self) self:x(-125);self:y(248);self:croptop(0);self:cropbottom(.86);self:cropleft(.625);self:cropright(.25);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+		Frame8Command="%function(self) self:x(-205);self:y(246);self:croptop(0);self:cropbottom(.86);self:cropleft(.76);self:cropright(.125);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+	/>
+	<Layer 
+		File="@GetClass()"
+		InitCommand="zoomy,1.2;queuecommand,Frame1"
+		Frame1Command="%function(self) self:x(-85);self:y(108);self:croptop(.28);self:cropbottom(.65);self:cropleft(.60);self:cropright(.30);self:sleep(GetSleep());self:queuecommand('Frame2') end"
+		Frame2Command="%function(self) self:x(-205);self:y(110);self:croptop(.28);self:cropbottom(.65);self:cropleft(.80);self:cropright(.12);self:sleep(GetSleep());self:queuecommand('Frame3') end"
+		Frame3Command="%function(self) self:x(215);self:y(64);self:croptop(.35);self:cropbottom(.56);self:cropleft(.13);self:cropright(.76);self:sleep(GetSleep());self:queuecommand('Frame4') end"
+		Frame4Command="%function(self) self:x(-205);self:y(110);self:croptop(.28);self:cropbottom(.65);self:cropleft(.80);self:cropright(.12);self:sleep(GetSleep());self:queuecommand('Frame5') end"
+		Frame5Command="%function(self) self:x(-85);self:y(108);self:croptop(.28);self:cropbottom(.65);self:cropleft(.60);self:cropright(.30);self:sleep(GetSleep());self:queuecommand('Frame6') end"
+		Frame6Command="%function(self) self:x(35);self:y(110);self:croptop(.28);self:cropbottom(.65);self:cropleft(.40);self:cropright(.50);self:sleep(GetSleep());self:queuecommand('Frame7') end"
+		Frame7Command="%function(self) self:x(155);self:y(112);self:croptop(.28);self:cropbottom(.65);self:cropleft(.20);self:cropright(.71);self:sleep(GetSleep());self:queuecommand('Frame8') end"
+		Frame8Command="%function(self) self:x(35);self:y(110);self:croptop(.28);self:cropbottom(.65);self:cropleft(.40);self:cropright(.50);self:sleep(GetSleep());self:queuecommand('Frame1') end"
+	/>
+</children></ActorFrame>

@@ -1,0 +1,4 @@
+[Model]
+Meshes=6panel_mesh.txt
+Materials=6panel_materials.txt
+Bones=6panel_bones.txt

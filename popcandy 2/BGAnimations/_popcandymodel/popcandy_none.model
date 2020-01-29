@@ -1,0 +1,4 @@
+[Model]
+Meshes=popcandy_mesh.txt
+Materials=popcandy_materials_none.txt
+Bones=popcandy_bones.txt

@@ -1,0 +1,74 @@
+<ActorFrame><children>
+	<Layer
+		Font="_FFT"
+		Text="ALALALA"
+		OnCommand="x,SCREEN_CENTER_X+90;y,SCREEN_CENTER_Y-200;zoomx,1.25;shadowlength,0;horizalign,left;maxwidth,160"
+		OffCommand="zoom,0"
+		SetCommand="%function(self) self:settext(GetSongName()) end"
+		CurrentSongChangedMessageCommand="playcommand,Set"
+	/>
+	<ActorFrame Condition="not GAMESTATE:IsCourseMode()" ><children>
+		<ActorFrame Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)" OnCommand="x,GetPaneX(PLAYER_1)+5;y,SCREEN_CENTER_Y-56;zoom,0;linear,0.2;zoom,1" OffCommand="zoom,0"><children>
+			<Layer
+				File="NoSong.png"
+				SetCommand="%function(self) self:zoom(0) ; if GetSongName() == '' then self:zoom(1); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+			<Layer
+				Font="_FFT2 pane"
+				Text="Best"
+				OnCommand="x,-107;y,15;horizalign,right;shadowlength,0;maxwidth,80"
+				SetCommand="%function(self) self:zoomy(0) ; if GetSongName() == '' then self:zoomy(.8); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+			<Layer
+				Condition="not PROFILEMAN:IsPersistentProfile(PLAYER_1)"
+				File="NoCard.png"
+				SetCommand="%function(self) self:zoom(1) ; if GetSongName() == '' then self:zoom(0); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+		</children></ActorFrame>
+		<ActorFrame Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)" OnCommand="x,GetPaneX(PLAYER_2)+10;y,SCREEN_CENTER_Y-56;zoom,0;linear,0.2;zoom,1" OffCommand="zoom,0"><children>
+			<Layer
+				File="NoSong.png"
+				SetCommand="%function(self) self:zoom(0) ; if GetSongName() == '' then self:zoom(1); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+			<Layer
+				Font="_FFT2 pane"
+				Text="Best"
+				OnCommand="x,-107;y,15;horizalign,right;shadowlength,0;maxwidth,80"
+				SetCommand="%function(self) self:zoomy(0) ; if GetSongName() == '' then self:zoomy(.8); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+			<Layer
+				Condition="not PROFILEMAN:IsPersistentProfile(PLAYER_2)"
+				File="NoCard.png"
+				SetCommand="%function(self) self:zoom(1) ; if GetSongName() == '' then self:zoom(0); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+		</children></ActorFrame>
+	</children></ActorFrame>
+	<Layer Type="ActorFrame" Condition="GAMESTATE:IsCourseMode()"> <children>
+		<ActorFrame Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)" OnCommand="x,GetPaneX(PLAYER_2)+15;y,SCREEN_CENTER_Y-56;zoom,0;linear,0.2;zoom,1" OffCommand="zoom,0"><children>
+			<Layer
+				Condition="not PROFILEMAN:IsPersistentProfile(PLAYER_1)"
+				File="NoCard.png"
+				SetCommand="%function(self) self:zoom(1) ; if GetSongName() == '' then self:zoom(0); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+		</children></ActorFrame>
+		<ActorFrame Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)" OnCommand="x,GetPaneX(PLAYER_2)+15;y,SCREEN_CENTER_Y+53;zoom,0;linear,0.2;zoom,1" OffCommand="zoom,0"><children>
+			<Layer
+				Condition="not PROFILEMAN:IsPersistentProfile(PLAYER_2)"
+				File="NoCard.png"
+				SetCommand="%function(self) self:zoom(1) ; if GetSongName() == '' then self:zoom(0); end ; end "
+				CurrentSongChangedMessageCommand="playcommand,Set"
+			/>
+		</children></ActorFrame>
+	</children></Layer>
+	<Layer
+		File="@THEME:GetPath( EC_BGANIMATIONS, '', '_boarder' )"
+	/>
+	<Layer Condition="not GAMESTATE:IsCourseMode()" File="DifficultyList.xml" Command="x,SCREEN_CENTER_X+230;y,SCREEN_CENTER_Y+50;zoom,0;sleep,.2;zoom,1;zoomy,.8" OffCommand="zoom,0" SongInfoMessageCommand="queuecommand,Update" />
+</children></ActorFrame>

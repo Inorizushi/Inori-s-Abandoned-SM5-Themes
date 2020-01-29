@@ -1,0 +1,10 @@
+Bones: 1
+"joint1"
+""
+8 107.000000 0.000000 -303.000000 0.000000 0.000000 0.000000
+0
+0
+GroupComments: 0
+MaterialComments: 0
+BoneComments: 0
+ModelComment: 0

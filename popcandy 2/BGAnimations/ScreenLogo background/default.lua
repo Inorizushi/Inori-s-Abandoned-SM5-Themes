@@ -1,0 +1,143 @@
+local t = Def.ActorFrame{};
+
+t[#t+1] = Def.ActorFrame{
+  LoadActor("back1")..{
+    InitCommand=cmd(x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;FullScreen);
+    OnCommand=function(self)
+			local w = DISPLAY:GetDisplayWidth() / self:GetWidth();
+			local h = DISPLAY:GetDisplayHeight() / self:GetHeight();
+			self:customtexturerect(0,0,w,h);
+			self:texcoordvelocity(-0.1,-0.1);
+		end;
+  };
+  LoadActor("chr")..{
+    InitCommand=cmd(Center;diffusealpha,0.5;bob;effectmagnitude,0,10,0;)
+  };
+  Def.Quad{
+    InitCommand=cmd(FullScreen);
+    OnCommand=cmd(sleep,1.0;diffusealpha,1;linear,1.0;diffusealpha,0;);
+  };
+  LoadActor("pat01")..{
+    InitCommand=cmd(CenterY;x,SCREEN_LEFT+16;zoomtoheight,SCREEN_HEIGHT);
+    OnCommand=function(self)
+      local w = SCREEN_HEIGHT*1.333333 / self:GetWidth();
+      local h = DISPLAY:GetDisplayHeight() / self:GetHeight();
+      self:customtexturerect(0,0,1,h);
+      self:texcoordvelocity(0,-0.1);
+    end;
+  };
+  LoadActor("pat01")..{
+    InitCommand=cmd(CenterY;x,SCREEN_RIGHT-16;zoomtoheight,SCREEN_HEIGHT);
+    OnCommand=function(self)
+      local w = SCREEN_HEIGHT*1.333333 / self:GetWidth();
+      local h = DISPLAY:GetDisplayHeight() / self:GetHeight();
+      self:customtexturerect(0,0,1,h);
+      self:texcoordvelocity(0,0.1);
+    end;
+  };
+  LoadActor("../_starmodel/star_green.txt")..{
+    InitCommand=cmd(xy,SCREEN_LEFT+120,SCREEN_CENTER_Y);
+    OnCommand=cmd(zoom,0;sleep,0.8;bounceend,0.3;zoom,4.0;spin;diffuse,1.0,0.9,0.9,1;effectmagnitude,0,90,0;);
+  };
+  LoadActor("logo")..{
+    InitCommand=cmd(x,SCREEN_RIGHT-160;y,SCREEN_CENTER_Y;bob;effectmagnitude,0,20,0);
+    OnCommand=cmd(zoom,0;sleep,0.8;bounceend,0.3;zoom,0.45;pulse;effectperiod,5;effectmagnitude,0.9,1,1;);
+  };
+  LoadActor("frame_u")..{
+    InitCommand=cmd(CenterX;y,SCREEN_TOP+68;zoomtowidth,SCREEN_WIDTH);
+    OnCommand=cmd(addy,-136;sleep,0.2;bouncebegin,0.2;addy,136;);
+  };
+  LoadActor("frame_d")..{
+    InitCommand=cmd(CenterX;y,SCREEN_BOTTOM-68;zoomtowidth,SCREEN_WIDTH);
+    OnCommand=cmd(addy,136;sleep,0.2;bouncebegin,0.2;addy,-136;);
+  };
+  LoadActor("pat02")..{
+    InitCommand=cmd(CenterX;y,SCREEN_CENTER_Y-136;zoomtowidth,SCREEN_WIDTH);
+    OnCommand=cmd(zoomy,0;addx,-640;sleep,0.4;linear,0.2;zoomy,1;addx,640;);
+  };
+  LoadActor("pat02")..{
+    InitCommand=cmd(CenterX;y,SCREEN_CENTER_Y+136;zoomtowidth,SCREEN_WIDTH);
+    OnCommand=cmd(zoomy,0;addx,640;sleep,0.4;linear,0.2;zoomy,1;addx,-640;);
+  };
+  LoadActor("pat03")..{
+    InitCommand=cmd(x,SCREEN_RIGHT-65;y,SCREEN_CENTER_Y+175);
+    OnCommand=cmd(zoom,0;sleep,0.6;bounceend,0.2;zoom,1.0;spin;effectmagnitude,0,0,80;);
+  };
+  LoadActor("pat03")..{
+    InitCommand=cmd(x,SCREEN_LEFT+64;y,SCREEN_TOP+64);
+    OnCommand=cmd(zoom,0;sleep,0.6;bounceend,0.2;zoom,1.0;spin;effectmagnitude,0,0,-80;);
+  };
+};
+
+t[#t+1] = Def.ActorFrame{
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-168,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.1;bounceend,0.5;addy,92;bob;effectperiod,2;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-144,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.2;bounceend,0.5;addy,92;bob;effectperiod,2.1;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-120,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.3;bounceend,0.5;addy,92;bob;effectperiod,2.2;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-96,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.4;bounceend,0.5;addy,92;bob;effectperiod,2.3;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-72,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.5;bounceend,0.5;addy,92;bob;effectperiod,2.4;effectmagnitude,0,8,0);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-48,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.6;bounceend,0.5;addy,92;bob;effectperiod,2.3;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X-24,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.7;bounceend,0.5;addy,92;bob;effectperiod,2.2;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.8;bounceend,0.5;addy,92;bob;effectperiod,2.1;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+24,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,0.9;bounceend,0.5;addy,92;bob;effectperiod,2;effectmagnitude,0,8,0);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+48,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.0;bounceend,0.5;addy,92;bob;effectperiod,2.1;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+72,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.1;bounceend,0.5;addy,92;bob;effectperiod,2.2;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+96,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.2;bounceend,0.5;addy,92;bob;effectperiod,2.3;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+120,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.3;bounceend,0.5;addy,92;bob;effectperiod,2.4;effectmagnitude,0,8,0);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+144,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.4;bounceend,0.5;addy,92;bob;effectperiod,2.3;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+168,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.5;bounceend,0.5;addy,92;bob;effectperiod,2.2;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+192,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.6;bounceend,0.5;addy,92;bob;effectperiod,2.1;effectmagnitude,0,8,0;);
+  };
+  LoadActor("ball")..{
+    InitCommand=cmd(zoom,0.75;xy,SCREEN_CENTER_X+212,SCREEN_TOP+64);
+    OnCommand=cmd(addy,-92;sleep,1.7;bounceend,0.5;addy,92;bob;effectperiod,2;effectmagnitude,0,8,0);
+  };
+};
+
+return t;
