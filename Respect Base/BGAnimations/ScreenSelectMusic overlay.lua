@@ -14,15 +14,15 @@ end
 
 local t = Def.ActorFrame{
   OnCommand = function(self)
-    SCREENMAN:GetTopScreen():AddInputCallback(input)
+    --SCREENMAN:GetTopScreen():AddInputCallback(input)
     self:diffusealpha(0)
     self:smooth(0.5)
     self:diffusealpha(1)
   end;
-  OffCommand = function(self)
+  --[[OffCommand = function(self)
     self:smooth(0.5)
     self:diffusealpha(0)
-  end;
+  end;]]
   MouseLeftClickMessageCommand = function(self)
     self:queuecommand("PlayTopPressedActor")
   end;

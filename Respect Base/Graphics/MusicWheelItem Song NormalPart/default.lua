@@ -17,7 +17,7 @@ t[#t+1] = quadButton(1) .. {
 	TopPressedCommand = function(self)
 
 		local newIndex = tonumber(self:GetParent():GetName())
-		local wheel = top:GetMusicWheel()
+		local wheel = SCREENMAN:GetTopScreen():GetChild("MusicWheel")
 		local size = wheel:GetNumItems()
 		local move = newIndex-wheel:GetCurrentIndex()
 
@@ -59,12 +59,10 @@ t[#t+1] = Def.ActorFrame{
         self:settext(Song:GetDisplayFullTitle());
 			elseif Course then
 				self:settext(Course:GetDisplayFullTitle());
-			end
-      if param.HasFocus then
-        self:y(0):zoom(1)
-      else
-        self:y(-7):zoom(0.75)
-      end;
+      end
+      if param.Index ~= nil then
+        self:y(param.HasFocus and 0 or -7):zoom(param.HasFocus and 1 or 0.75)
+      end
 	   end;
   };
   --Artist
@@ -78,12 +76,14 @@ t[#t+1] = Def.ActorFrame{
         self:settext(Song:GetDisplayArtist());
 			elseif Course then
 				self:settext("");
-			end
+      end
+      if param.Index ~= nil then
       if param.HasFocus then
         self:visible(false)
       else
         self:visible(true)
-      end;
+      end
+    end
 	   end;
   };
   Def.Quad{
